@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="App.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <title>Mogage Calculator</title>
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5">
+                    <h3 class="heading" style="font-family: 'Times New Roman', Times, serif; font-weight: bold;"> Halal Morgage Calculator </h3>
+                    <form id="loan-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text" id="inputGroupPrepend2">$</span>
+                                <input type="number" required class="form-control" id="amount" placeholder="Loan Amount"
+                                    aria-describedby="inputGroupPrepend2" required>
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text" id="inputGroupPrepend2">%</span>
+                                <input type="number" class="form-control" id="intrest" placeholder="Profit/Intrest"
+                                    aria-describedby="inputGroupPrepend2" required>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+
+                                <input type="number" class="form-control" id="years" placeholder="Years to Repay"
+                                    aria-describedby="inputGroupPrepend2" required>
+
+                            </div>
+                        </div>
+
+                    </form>
+                    <!-- Calculate buttom-->
+                    <div>
+                        <button onclick= "calculateResult()" onclick="timeFunction()"  type="button" class="btn btn-dark" id="calBtn" >CALCULATE</button>
+                    </div>
+
+                    
+
+                   
+                   
+
+                    <!-- Loader here-->
+                    <div id="loading" class="loading" style="padding-top: 10px; display: none;">
+                        <img src="img/loading.gif"  width="104%" height="100%" >
+                        
+
+                    </div>
+
+                    <!-- Calculate here-->
+                    <h5 style="padding-top: 15px;">RESULTS</h5>
+
+                    <!--Monthly payment label-->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-text" id="inputGroupPrepend2">Monthly Payment $</span>
+                            <input id="monthly-payment" type="number" class="form-control"  disabled
+                                aria-describedby="inputGroupPrepend2" required>
+
+                        </div>
+
+                        <!--Total Payment label-->
+                        <div class="input-group" style="padding-top: 10px;">
+                            <span class="input-group-text" id="inputGroupPrepend2">Total Payment $</span>
+                            <input id="total-payment" type="number" class="form-control"  disabled
+                                aria-describedby="inputGroupPrepend2" required>
+
+                        </div>
+                        <!--Total Intrest-->
+                        <div class="input-group" style="padding-top: 10px;">
+                            <span class="input-group-text" id="inputGroupPrepend2">Total Profit/Intrest $</span>
+                            <input id="total-intrest" type="number" class="form-control"  disabled
+                                aria-describedby="inputGroupPrepend2" required>
+
+                                <!-- Remember-->
+                        </div>
+                        <div id="remember" style="display: none;" class="card-body" class="card">
+                            <div class="card-header">
+                             <strong>Remember</strong> 
+                            </div>
+                            <div >
+                              <blockquote class="blockquote mb-0">
+                                <p>There will be other monthly or annually expenses for the house, such as Taxes, Home Insurance, and sometimes HOA fees. Please check with your agent.</p>
+                                <footer class="blockquote-footer">AhmedulHadi Sharif at <cite title="Source Title">TSU</cite></footer>
+                              </blockquote>
+                            </div><br>
+                            <!-- RESTART-->
+                            <div>
+                                <a href="index.html" class="btn btn-success" role="button">RESTART</a>
+                                
+                            </div>
+                          </div>
+                          
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="App.js"></script>
+        
+</body>
+
+</html>
